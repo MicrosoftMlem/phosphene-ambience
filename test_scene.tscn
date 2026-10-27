@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dynswi7q5s2eg"]
+
+[ext_resource type="PackedScene" uid="uid://b0l74vgkyp3np" path="res://clem.tscn" id="1_uhqqe"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_14b7f"]
+
+[node name="TestScene" type="Node3D" unique_id=1266332425]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=622246953]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=124809366]
+shape = SubResource("WorldBoundaryShape3D_14b7f")
+
+[node name="clem" parent="." unique_id=1015059569 instance=ExtResource("1_uhqqe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78483915, 0)

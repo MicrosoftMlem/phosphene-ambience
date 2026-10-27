@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b0l74vgkyp3np"]
+
+[ext_resource type="Script" uid="uid://celowu4ws0lxg" path="res://clem.gd" id="1_31enw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wyend"]
+radius = 0.4
+height = 1.8
+
+[node name="clem" type="RigidBody3D" unique_id=1015059569]
+collision_layer = 2
+script = ExtResource("1_31enw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=96104356]
+shape = SubResource("CapsuleShape3D_wyend")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1281995740]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 1.2419095, -2.2547722)
+
+[node name="groundCast" type="RayCast3D" parent="." unique_id=149083431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.87104696, 0)
+target_position = Vector3(0, -0.1, 0)
